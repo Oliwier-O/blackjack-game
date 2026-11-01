@@ -192,9 +192,17 @@ function placeBet(amount) {
         messageEl.textContent = message
         return
     }
-    if (player.chips >= amount) {
-        bet = amount
+    if (player.chips >= bet + amount) {
+        bet += amount
         betEl.textContent = "Current Bet: $" + bet
     }
 
+}
+
+function clearBet() {
+    if (gameInProgress === true) {
+        return
+    }
+    bet = 0
+    betEl.textContent = "Current Bet: $0"
 }
