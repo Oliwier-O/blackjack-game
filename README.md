@@ -23,3 +23,6 @@ Later, I added a main menu, age check, dealer and more game features.
 These were my own ideas, but I also used AI to help me with the code.
 
 I am still working on this project.
+
+## Live Demo
+[Play Blackjack](https://oliwier-o.github.io/blackjack-game/)
