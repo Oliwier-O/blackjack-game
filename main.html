@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>Blackjack</title>
+</head>
+
+<body>
+    <h1>BLACKJACK CASINO</h1>
+    <p>Welcome to the game!</p>
+    <p>Are you ready to play?</p>
+    <a href="#" class="play-btn" onclick="checkAge()">PLAY NOW</a>
+    <div id="age-check">
+        <div class="age-style">
+            <h2>Are you 18 or older?</h2>
+            <p>You must be 18 or older to play.</p>
+            <button id="yes-btn" onclick="acceptAge()">YES</button>
+            <button id="no-btn" onclick="closeAgeCheck()">NO</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
