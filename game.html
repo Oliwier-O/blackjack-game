@@ -3,28 +3,36 @@
 
 <head>
     <link rel="stylesheet" href="game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
 </head>
 
 <body>
     <div class="game-container">
+        <button class="new-game-btn" onclick="newGame()">↻ NEW GAME</button>
         <h1>Blackjack</h1>
         <p id="message-el">Want to play a round?</p>
-        <p id="dealer-cards">Dealer's Cards:</p>
-        <p id="dealer-sum">Dealer's Sum:</p>
-        <p id="cards-el">Cards:</p>
-        <p id="sum-el">Sum:</p>
+        <div class="dealer-section">
+            <p id="dealer-cards">Dealer's Cards:</p>
+            <p id="dealer-sum">Dealer's Sum:</p>
+        </div>
+        <div class="player-section">
+            <p id="cards-el">Cards:</p>
+            <p id="sum-el">Sum:</p>
+        </div>
 
         <div class="buttons">
             <button onclick="startGame()">DEAL</button>
             <button onclick="newCard()">HIT</button>
             <button onclick="stand()">STAND</button>
         </div>
-        <div>
-            <button onclick="placeBet(10)">BET 10</button>
-            <button onclick="placeBet(20)">BET 20</button>
-            <button onclick="placeBet(50)">BET 50</button>
-            <button onclick="placeBet(100)">BET 100</button>
-            <button onclick="clearBet()">CLEAR BET</button>
+        <div class="betting-section">
+            <button class="chip chip-10" onclick="placeBet(10)">BET 10</button>
+            <button class="chip chip-20" onclick="placeBet(20)">BET 20</button>
+            <button class="chip chip-50" onclick="placeBet(50)">BET 50</button>
+            <button class="chip chip-100" onclick="placeBet(100)">BET 100</button>
+            <button class="clear-bet" onclick="clearBet()">CLEAR BET</button>
             <p id="bet-el">Current Bet: $0</p>
         </div>
         <p id="player-el"></p>

@@ -138,7 +138,7 @@ function stand() {
     }
     isAlive = false
 
-    while (dealerSum < 17) {
+    while (dealerSum < 17 && hasBlackJack === false) {
         let card = getRandomCard()
         dealerSum += card
         dealerCards.push(card)
@@ -181,7 +181,7 @@ function stand() {
     playerEl.textContent = player.name + ": $" + player.chips
     gameInProgress = false
     if (player.chips === 0) {
-        message = "You're out of chips! Please refresh the page to play again."
+        message = "You're out of chips! Click '↻ NEW GAME' to start over."
         messageEl.textContent = message
     }
 }
@@ -205,4 +205,8 @@ function clearBet() {
     }
     bet = 0
     betEl.textContent = "Current Bet: $0"
+}
+
+function newGame() {
+    location.reload()
 }

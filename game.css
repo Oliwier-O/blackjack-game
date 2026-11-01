@@ -14,6 +14,13 @@ body {
 
 h1 {
     color: goldenrod;
+    font-size: clamp(40px, 7vw, 100px);
+    margin: 20px 0;
+}
+
+#message-el {
+    font-size: 40px;
+    margin: 20px 0;
 }
 
 button {
@@ -24,12 +31,14 @@ button {
     padding-bottom: 5px;
     font-weight: bold;
     border: none;
-    border-radius: 2px;
+    border-radius: 6px;
     margin-bottom: 2px;
     margin-top: 2px;
+    transition: background 0.3s ease, color 0.3s ease;
+
 }
 
-button:hover {
+button:not(.chip):hover {
     background: #016f32;
     color: goldenrod;
     cursor: pointer;
@@ -52,4 +61,78 @@ button:hover {
     color: goldenrod;
     text-decoration: none;
     margin-top: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.dealer-section,
+.player-section {
+    width: min(400px, 85vw);
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.chip {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 5px dashed white;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s ease;
+}
+
+.chip:hover {
+    transform: scale(1.1);
+}
+
+.chip:active {
+    transform: scale(0.9);
+}
+
+.chip-10 {
+    background-color: #ff0000;
+}
+
+.chip-20 {
+    background-color: #0aac0a;
+}
+
+.chip-50 {
+    background-color: #0000ff;
+}
+
+.chip-100 {
+    background-color: black;
+}
+
+.clear-bet {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    width: 120px;
+}
+
+.new-game-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
 }
